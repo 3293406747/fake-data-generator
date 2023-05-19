@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>伪数据生成器</title>
+  </head>
+  <body>
+    <p>伪数据生成器</p>
+    <div id="box">
+        <select id="choose">
+            <option value ="name">姓名</option>
+            <option value ="phone">手机号</option>
+            <option value="ssn">身份证号</option>
+            <option value="job">工作</option>
+            <option value="address">地址</option>
+            <option value="company">公司</option>
+            <option value="email">邮箱</option>
+            <option value="credit_code">统一社会信用代码</option>
+        </select>
+        <button type="button" id="create">生成</button>
+        <button type="button" id="clear">重置</button>
+        <p>数据生成后已自动复制到剪切板，粘贴即可!</p>
+    </div>
+    <div id="list"></div>
+  </body>
+  <script src="sources"></script>
+</html>
