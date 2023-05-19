@@ -1,6 +1,6 @@
 import click
 
-from generate_fake_data import GenerateFakeData
+from generator import GenerateFakeData
 from utils import Clipboard
 
 gfd = GenerateFakeData()
