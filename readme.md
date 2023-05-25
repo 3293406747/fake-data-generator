@@ -60,4 +60,4 @@ python __init__.py -t name
 
 ## 支持
 
-如果你喜欢该项目可以在github进行star或分享。
+如果你喜欢该项目欢迎在github进行star或将该项目进行分享。
