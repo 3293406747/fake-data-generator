@@ -16,7 +16,7 @@ class GenerateFakeData:
 	def __init__(self):
 		self._faker = Faker(locale='zh-CN')
 
-		self.emails = (
+		emails = (
 			'126.com',
 			'sina.com',
 			'qq.com',
@@ -37,8 +37,7 @@ class GenerateFakeData:
 			'word': 'word',
 			'card': 'card',
 			'province': 'province',
-			'email': lambda: self._string(random.randint(6, 16)) + "@" + random.choice(
-				self.emails),
+			'email': lambda: self._string(random.randint(6, 16)) + "@" + random.choice(emails),
 			'address': lambda: re.sub(r"[a-zA-Z]\w\s\d{3}", "", self._faker.address()) + "号",
 			'company': lambda: self._faker.province().rstrip('省') + self._faker.company(),
 		}
