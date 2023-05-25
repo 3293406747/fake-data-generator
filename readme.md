@@ -1,6 +1,7 @@
 # 伪数据生成工具
 
 伪数据生成工具,支持命令行和浏览器两种方式生成伪数据。可生成姓名、手机号、身份证号、统一社会信用代码等数据，数据生成后自动复制到剪切板。
+该工具由python语言编写，使用了flask，click等第三方库。
 
 **浏览器方式**
 
@@ -24,32 +25,38 @@
 
 ### 命令行
 
-1. 进入'command'目录找到'\_\_init__.py文件并执行该文件。
-2. 在用户交互页面输入要生成的内容，如要生成姓名可输入name。
+1. 在命令行切换到项目根目录下的command目录。
+2. 在命令行运行以下命令运行程序，如要生成姓名:
+```shell
+python __init__.py -t name
+```
 
 ## 打包成可执行文件（.exe）
 
-1. 安装pyinstaller工具。在命令行中执行`pip install pyinstaller`。
-2. 打包第一步。在控制台中进入'command'目录，执行`pyinstaller -D __init__.py`。
-3. 打包第二步。打包完成后生成'dist'目录，进入'dist'目录下的'\_\_init__'目录。
-4. 打包第三步。将'data'目录复制到'dist'目录下的'\_\_init__'目录中。
-5. 运行可执行文件第一步。在命令行进入到'dist'目录下的'\_\_init__'目录中。
-6. 运行可执行文件第二步。在命令行输入`__init__ -t name`命令。
+如果你想将该 Python 程序打包成 Windows 可执行文件，可以使用 PyInstaller 工具进行打包。
+打包后的程序可以在 Windows 上运行，而无需安装 Python 环境。
+
+1. 安装pyinstaller工具。在命令行中执行`pip install pyinstaller`命令以安装pyinstaller工具。
+2. 执行打包命令。在命令行进入程序所在目录，执行`pyinstaller -D __init__.py`命令。
+3. 添加资源文件。打包完成后在生成的'dist'目录'下找到\_\_init__'目录并进入，并将'data'目录复制到该目录中。
+4. 运行可执行文件。在命令行切换到该目录，在命令行执行`__init__ -t name`命令，该命令用于生成姓名。
 
 ## 命令行命令说明
 
-`__init__ -t name`命令中的-t后面跟的是要生成的数据。如要生成姓名可输入'name'。
+### 参数设置
+
+- --target / -t: 要生成的数据，必填参数。
 
 ### 支持的参数
 
-- name指生成姓名
-- phone指生成手机号
-- ssn指生成身份证号
-- job指生成工作名称
-- address指生成地址
-- company指生成公司名称
-- email指生成邮箱
-- credit_code指生成统一社会信用代码
+- name: 姓名
+- phone: 手机号
+- ssn: 身份证号
+- job: 工作名称
+- address: 地址
+- company: 公司名称
+- email: 邮箱
+- credit_code: 统一社会信用代码
 
 ## 支持
 
